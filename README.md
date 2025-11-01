@@ -35,7 +35,6 @@ W skład paczki wchodzi 16 dopracowanych skryptów:
 - Ping  
 - Workbench  
 - Enderchest  
-- Vanish  
 - Invsee  
 - God  
 - Broadcast  
