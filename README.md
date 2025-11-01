@@ -42,7 +42,7 @@ W skład paczki wchodzi 16 dopracowanych skryptów:
 - ClearChat  
 - Day
 - Night  
-- GM (tryby gry)  
+- GM
 - Repair  
 - TPA
 
