@@ -1,8 +1,8 @@
 command /repair:
-	permission: skript.repair.use
-	trigger:
-		if player's tool is not air:
-			set durability of player's tool to 100000
-			send "&e&l[REPAIR] &aNaprawiono przedmiot w twojej ręce!"
-		else:
-			send "&e&l[REPAIR] &cMusisz trzymać jakiś przedmiot!"
+    permission: skript.repair.use
+    trigger:
+        if player's tool is not air:
+            set durability of player's tool to 100000
+            send "&e&l[REPAIR] &aNaprawiono przedmiot w twojej ręce!"
+        else:
+            send "&e&l[REPAIR] &cMusisz trzymać jakiś przedmiot!"

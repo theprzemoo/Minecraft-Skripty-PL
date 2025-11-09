@@ -1,44 +1,44 @@
 command /tpa [<player>]:
-	permission: skript.tpa.use
-	trigger:
-		if arg-1 is not set:
-			send "&e&l[TPA] &cUżycie: /tpa <gracz>"
-			stop
-		set {_target} to arg-player
-		if {_target} is not online:
-			send "&e&l[TPA] &cTen gracz nie jest online!"
-			stop
-		if {_target} is player:
-			send "&e&l[TPA] &cNie możesz wysłać prośby do samego siebie!"
-			stop
-		set {tpa.request::%{_target}%} to player
-		send "&e&l[TPA] &aWysłałeś prośbę o teleportację do &e%name of {_target}%!"
-		send "&e&l[TPA] &e%name of player% &achce się do ciebie teleportować!"
-		send "&7Użyj &a/tpaccept &7aby zaakceptować lub &c/tpdeny &7aby odrzucić."
+    permission: skript.tpa.use
+    trigger:
+        if arg-1 is not set:
+            send "&e&l[TPA] &cUżycie: /tpa <gracz>"
+            stop
+        set {_target} to arg-player
+        if {_target} is not online:
+            send "&e&l[TPA] &cTen gracz nie jest online!"
+            stop
+        if {_target} is player:
+            send "&e&l[TPA] &cNie możesz wysłać prośby do samego siebie!"
+            stop
+        set {tpa.request::%{_target}%} to player
+        send "&e&l[TPA] &aWysłałeś prośbę o teleportację do &e%name of {_target}%!"
+        send "&e&l[TPA] &e%name of player% &achce się do ciebie teleportować!"
+        send "&7Użyj &a/tpaccept &7aby zaakceptować lub &c/tpdeny &7aby odrzucić."
 
 command /tpaccept:
-	permission: skript.tpa.use
-	trigger:
-		if {tpa.request::%player%} is not set:
-			send "&e&l[TPA] &cNie masz żadnych próśb o teleportację!"
-			stop
-		set {_sender} to {tpa.request::%player%}
-		if {_sender} is online:
-			teleport {_sender} to player
-			send "&e&l[TPA] &aZaakceptowałeś prośbę o teleportację od &e%name of {_sender}%!"
-			send "&e&l[TPA] &aTwoja prośba o teleportację została zaakceptowana!" to {_sender}
-		else:
-			send "&e&l[TPA] &cGracz, który wysłał prośbę, jest offline!"
-		delete {tpa.request::%player%}
+    permission: skript.tpa.use
+    trigger:
+        if {tpa.request::%player%} is not set:
+            send "&e&l[TPA] &cNie masz żadnych próśb o teleportację!"
+            stop
+        set {_sender} to {tpa.request::%player%}
+        if {_sender} is online:
+            teleport {_sender} to player
+            send "&e&l[TPA] &aZaakceptowałeś prośbę o teleportację od &e%name of {_sender}%!"
+            send "&e&l[TPA] &aTwoja prośba o teleportację została zaakceptowana!" to {_sender}
+        else:
+            send "&e&l[TPA] &cGracz, który wysłał prośbę, jest offline!"
+        delete {tpa.request::%player%}
 
 command /tpdeny:
-	permission: skript.tpa.use
-	trigger:
-		if {tpa.request::%player%} is not set:
-			send "&e&l[TPA] &cNie masz żadnych próśb o teleportację!"
-			stop
-		set {_sender} to {tpa.request::%player%}
-		if {_sender} is online:
-			send "&e&l[TPA] &cOdrzuciłeś prośbę o teleportację od &e%name of {_sender}%!"
-			send "&e&l[TPA] &cTwoja prośba o teleportację została odrzucona!" to {_sender}
-		delete {tpa.request::%player%}
+    permission: skript.tpa.use
+    trigger:
+        if {tpa.request::%player%} is not set:
+            send "&e&l[TPA] &cNie masz żadnych próśb o teleportację!"
+            stop
+        set {_sender} to {tpa.request::%player%}
+        if {_sender} is online:
+            send "&e&l[TPA] &cOdrzuciłeś prośbę o teleportację od &e%name of {_sender}%!"
+            send "&e&l[TPA] &cTwoja prośba o teleportację została odrzucona!" to {_sender}
+        delete {tpa.request::%player%}

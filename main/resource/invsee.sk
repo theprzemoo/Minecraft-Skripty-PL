@@ -1,13 +1,13 @@
 command /invsee [<player>]:
-	permission: skript.invsee.use
-	trigger:
-		if arg-1 is set:
-			set {_target} to arg-player
-			if {_target} is online:
-				open inventory of {_target} to player
-				send "&e&l[INVSEE] &aOtworzono ekwipunek gracza &e%name of {_target}%"
-			else:
-				send "&e&l[INVSEE] &cGracz nie jest online!"
-		else:
-			send "&e&l[INVSEE] &cUżycie: /invsee <gracz>"
+    permission: skript.invsee.use
+    trigger:
+        if arg-1 is set:
+            set {_target} to arg-player
+            if {_target} is online:
+                open inventory of {_target} to player
+                send "&e&l[INVSEE] &aOtworzono ekwipunek gracza &e%name of {_target}%"
+            else:
+                send "&e&l[INVSEE] &cGracz nie jest online!"
+        else:
+            send "&e&l[INVSEE] &cUżycie: /invsee <gracz>"
 

@@ -1,6 +1,6 @@
 command /ec:
-	permission: skript.enderchest
-	aliases: enderchest
-	trigger:
-		open the player's ender chest to the player
-		send "&e&l[ENDERCHEST] &aOtworzono Twój Ender Chest!"
+    permission: skript.enderchest
+    aliases: enderchest
+    trigger:
+        open the player's ender chest to the player
+        send "&e&l[ENDERCHEST] &aOtworzono Twój Ender Chest!"

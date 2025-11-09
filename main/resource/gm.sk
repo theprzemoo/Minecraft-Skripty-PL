@@ -1,17 +1,17 @@
 command /gm [<number>]:
-	permission: skript.gm.use
-	trigger:
-		if arg-1 is 0 or "s" or "survival":
-			set player's gamemode to survival
-			send "&e&l[GM] &aUstawiono tryb &eSurvival!"
-		else if arg-1 is 1 or "c" or "creative":
-			set player's gamemode to creative
-			send "&e&l[GM] &aUstawiono tryb &eCreative!"
-		else if arg-1 is 2 or "a" or "adventure":
-			set player's gamemode to adventure
-			send "&e&l[GM] &aUstawiono tryb &eAdventure!"
-		else if arg-1 is 3 or "sp" or "spectator":
-			set player's gamemode to spectator
-			send "&e&l[GM] &aUstawiono tryb &eSpectator!"
-		else:
-			send "&e&l[GM] &cUżycie: /gm <0/1/2/3>"
+    permission: skript.gm.use
+    trigger:
+        if arg-1 is 0 or "s" or "survival":
+            set player's gamemode to survival
+            send "&e&l[GM] &aUstawiono tryb &eSurvival!"
+        else if arg-1 is 1 or "c" or "creative":
+            set player's gamemode to creative
+            send "&e&l[GM] &aUstawiono tryb &eCreative!"
+        else if arg-1 is 2 or "a" or "adventure":
+            set player's gamemode to adventure
+            send "&e&l[GM] &aUstawiono tryb &eAdventure!"
+        else if arg-1 is 3 or "sp" or "spectator":
+            set player's gamemode to spectator
+            send "&e&l[GM] &aUstawiono tryb &eSpectator!"
+        else:
+            send "&e&l[GM] &cUżycie: /gm <0/1/2/3>"

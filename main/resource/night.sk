@@ -1,5 +1,5 @@
 command /night:
-	permission: skript.timenight
-	trigger:
-		set time to night
-		send "&e&l[NIGHT] &aUstawiono noc!"
+    permission: skript.timenight
+    trigger:
+        set time to night
+        send "&e&l[NIGHT] &aUstawiono noc!"

@@ -1,6 +1,6 @@
 command /broadcast <text>:
-	permission: skript.bc.use
-	aliases: bc
-	trigger:
-		broadcast "&e&l[INFO] &f%arg-1%"
+    permission: skript.bc.use
+    aliases: bc
+    trigger:
+        broadcast "&e&l[INFO] &f%arg-1%"
 

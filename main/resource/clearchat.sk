@@ -1,7 +1,7 @@
 command /clearchat:
-	permission: skript.clearchat.use
-	trigger:
-		loop all players:
-			loop 100 times:
-				send "" to loop-player
-			send "&e&l[CLEARCHAT] &7Czat został &awyczyszczony &7przez &e%player%" to loop-player
+    permission: skript.clearchat.use
+    trigger:
+        loop all players:
+            loop 100 times:
+                send "" to loop-player
+            send "&e&l[CLEARCHAT] &7Czat został &awyczyszczony &7przez &e%player%" to loop-player

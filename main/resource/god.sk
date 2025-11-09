@@ -1,13 +1,13 @@
 command /god:
-	permission: skript.god.use
-	trigger:
-		if {god.%player%} is true:
-			delete {god.%player%}
-			send "&e&l[GOD] &cTryb nieśmiertelności wyłączony!"
-		else:
-			set {god.%player%} to true
-			send "&e&l[GOD] &aTryb nieśmiertelności włączony!"
+    permission: skript.god.use
+    trigger:
+        if {god.%player%} is true:
+            delete {god.%player%}
+            send "&e&l[GOD] &cTryb nieśmiertelności wyłączony!"
+        else:
+            set {god.%player%} to true
+            send "&e&l[GOD] &aTryb nieśmiertelności włączony!"
 
 on damage:
-	if {god.%victim%} is true:
-		cancel event
+    if {god.%victim%} is true:
+        cancel event
