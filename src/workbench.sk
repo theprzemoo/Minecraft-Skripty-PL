@@ -1,0 +1,8 @@
+command /workbench:
+    description: Otwiera stół rzemieślniczy
+    usage: /workbench
+    permission: skript.workbench
+    aliases: crafting, craft, bench, wb
+    trigger:
+        open workbench for player
+        send "&aOtworzono stół rzemieślniczy!"

@@ -1,0 +1,45 @@
+command /fly [<player>]:
+    permission: skript.fly.use
+    permission message: &e&l[FLY] &cNie masz uprawnień do tej komendy!
+    trigger:
+        if arg-1 is set:
+            if player has permission "skript.fly.others":
+                set {_target} to arg-1
+                if {_target} is online:
+                    if {fly.%{_target}%} is not set:
+                        set {fly.%{_target}%} to true
+                        set flight mode of {_target} to true
+                        send "&e&l[FLY] &aWłączyłeś latanie dla %{_target}%."
+                        send "&e&l[FLY] &aLatanie zostało włączone!" to {_target}
+                    else:
+                        delete {fly.%{_target}%}
+                        set flight mode of {_target} to false
+                        send "&e&l[FLY] &cWyłączyłeś latanie dla %{_target}%."
+                        send "&e&l[FLY] &cLatanie zostało wyłączone!" to {_target}
+                else:
+                    send "&e&l[FLY] &cTen gracz jest offline."
+            else:
+                send "&e&l[FLY] &cNie masz uprawnień do włączania latania innym!"
+        else:
+            if {fly.%player%} is not set:
+                set {fly.%player%} to true
+                set flight mode of player to true
+                send "&e&l[FLY] &aLatanie zostało włączone!"
+            else:
+                delete {fly.%player%}
+                set flight mode of player to false
+                send "&e&l[FLY] &cLatanie zostało wyłączone!"
+
+on quit:
+    if player has permission "skript.fly.persist":
+        if {fly.%player%} is set:
+            set {fly_saved.%player%} to true
+    delete {fly.%player%}
+
+on join:
+    if player has permission "skript.fly.persist":
+        if {fly_saved.%player%} is set:
+            set flight mode of player to true
+            set {fly.%player%} to true
+            delete {fly_saved.%player%}
+            send "&e&l[FLY] &eTwój tryb latania został automatycznie przywrócony."

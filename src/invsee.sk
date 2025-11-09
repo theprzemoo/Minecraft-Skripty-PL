@@ -1,0 +1,19 @@
+command /invsee [<player>]:
+    permission: skript.invsee.use
+    trigger:
+
+        if sender is not a player:
+            send "&cTego polecenia możesz użyć tylko jako gracz!"
+            stop
+
+        if arg-1 isn't set:
+            send "&e&l[INVSEE] &cUżycie: /invsee <gracz>"
+            stop
+
+        if arg-1 is not online:
+            send "&e&l[INVSEE] &cGracz nie jest online!"
+            stop
+
+        open inventory of arg-1 to player
+        send "&e&l[INVSEE] &aOtworzono ekwipunek gracza &e%name of arg-1%"
+

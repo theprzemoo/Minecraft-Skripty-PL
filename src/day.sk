@@ -1,0 +1,5 @@
+command /day:
+    permission: skript.timeday
+    trigger:
+        set time to day
+        send "&e&l[DAY] &aUstawiono dzień!"

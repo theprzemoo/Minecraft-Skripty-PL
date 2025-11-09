@@ -1,0 +1,13 @@
+command /ping [<player>]:
+    permission: skript.ping.use
+    trigger:
+
+        if arg-1 isn't set:
+            send "&e&l[PING] &aTwój ping: &e%ping of player%ms"
+            stop
+
+        if player doesn't have permission "skript.ping.others":
+            send "&e&l[PING] &cNie masz uprawnień do sprawdzania pingów innych!"
+            stop
+
+        send "&e&l[PING] &aPing &e%arg-1%&a: %ping of arg-1%ms"

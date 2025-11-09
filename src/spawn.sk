@@ -1,0 +1,6 @@
+command /spawn:
+    permission: skript.spawn.use
+    permission message: &cNie masz uprawnień do tej komendy!
+    trigger:
+        teleport player to spawn point of world "world"
+        send "&e&l[SPAWN] &aTeleportowano na spawn!"

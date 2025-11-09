@@ -1,0 +1,10 @@
+command /repair:
+    permission: skript.repair.use
+    trigger:
+
+        if player's tool is air:
+            send "&e&l[REPAIR] &cMusisz trzymać jakiś przedmiot!"
+            stop
+
+        repair player's tool
+        send "&e&l[REPAIR] &aNaprawiono przedmiot w twojej ręce!"

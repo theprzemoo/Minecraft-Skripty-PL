@@ -86,6 +86,7 @@ W skład paczki wchodzi 16 dopracowanych skryptów:
 |--------------|------|
 | `skript.bc.use` | Dostęp do komendy /broadcast (alias: /bc) |
 | `skript.clearchat.use` | Dostęp do komendy /clearchat |
+| `skript.chatclear.bypass` | Czat posiadacza tego uprawnienia nie jest czyszczony |
 | `skript.timeday` | Dostęp do komendy /day |
 | `skript.enderchest` | Dostęp do komendy /ec (alias: /enderchest) |
 | `skript.feed` | Użycie komendy /feed na sobie |

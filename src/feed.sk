@@ -1,0 +1,22 @@
+command /feed [<player>]:
+    permission: skript.feed
+    permission message: &cNie masz uprawnień do tej komendy!
+    trigger:
+        if arg-1 is not set:
+            feed player
+            send "&e&l[FEED] &aZostałeś nakarmiony!"
+            stop
+
+        if player doesn't have permission "skript.feed.others":
+            send "&e&l[FEED] &cNie masz uprawnień do karmienia innych!"
+            stop
+
+        if arg-1 is not online:
+            send "&e&l[FEED] &cTen gracz jest offline!"
+            stop
+
+        feed arg-1
+        send "&e&l[FEED] &aZostałeś nakarmiony!" to arg-1
+        if arg-1 is not sender:
+            send "&e&l[FEED] &aNakarmiłeś %arg-1%!"
+
