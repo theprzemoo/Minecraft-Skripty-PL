@@ -2,4 +2,4 @@
 
 cd "$( dirname -- "$0" )" || exit 1
 
-zip -r Paczka.zip ../src/ ../include/ ../LICENSE
+zip -qrj Paczka.zip ../src/ ../include/ ../LICENSE
